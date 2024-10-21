@@ -1,0 +1,9 @@
+# Define the two datasets
+dataset_A <- c(6, 7, 8, 9)
+dataset_B <- c(1, 2, 4, 5)
+
+# Combine the datasets into a new dataset C
+dataset_C <- c(dataset_A, dataset_B)
+
+# Display the output
+print(dataset_C)
