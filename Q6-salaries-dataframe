@@ -1,0 +1,17 @@
+# Salary Data
+salaries <- data.frame(
+  Employee = c("Vivek", "Karan", "James", "Soham", "Renu", "Farah", "Hetal", "Mary", "Ganesh", "Krish"),
+  Salary = c(21000, 55000, 67000, 50000, 54000, 40000, 30000, 70000, 20000, 15000)
+)
+print(salaries)
+# Adding new employees
+new_employees <- data.frame(
+  Employee = c("Amit", "John", "Sara", "Ankit", "Rita"),
+  Salary = c(62000, 48000, 75000, 38000, 59000)
+)
+print(new_employees)
+# Combining datasets
+combined_salaries <- rbind(salaries, new_employees)
+
+# Visualization
+barplot(combined_salaries$Salary, names.arg=combined_salaries$Employee, col="lightblue", main="Employee Salaries")
