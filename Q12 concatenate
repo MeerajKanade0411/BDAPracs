@@ -1,0 +1,2 @@
+result <- paste("Ram has scored", 89, "marks", "in Mathematics")
+print(result,quote=FALSE)
