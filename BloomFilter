@@ -1,0 +1,33 @@
+library(digest)
+
+# Function to create a Bloom filter
+create_bloom_filter <- function(size) {
+  return(rep(FALSE, size))
+}
+
+# Hash function
+hash_function <- function(element, size) {
+  # Convert the hexadecimal hash to a numeric value
+  hash_val <- strtoi(substr(digest(element, algo = "md5", serialize = FALSE), 1, 8), 16L)
+  return((hash_val %% size) + 1)
+}
+
+# Function to add elements to Bloom filter
+add_to_bloom_filter <- function(bloom_filter, element) {
+  pos <- hash_function(element, length(bloom_filter))
+  bloom_filter[pos] <- TRUE
+  return(bloom_filter)
+}
+
+# Function to check membership in Bloom filter
+check_membership <- function(bloom_filter, element) {
+  pos <- hash_function(element, length(bloom_filter))
+  return(bloom_filter[pos])
+}
+
+# Example usage
+size <- 100
+bloom_filter <- create_bloom_filter(size)
+bloom_filter <- add_to_bloom_filter(bloom_filter, "Alice")
+check_membership(bloom_filter, "Alice")  # Should return TRUE
+check_membership(bloom_filter, "Bob")    # May return FALSE or TRUE (probabilistic)
