@@ -1,0 +1,9 @@
+# Sample vectors
+product1 <- c(12, 3, 5, 11, 9)
+product2 <- c(21, 27, 18, 20, 15)
+product3 <- c(10, 1, 33, 6, 12)
+product4 <- c(6, 7, 4, 13, 12)
+product5 <- c(5, 8, 12, 20, 23)
+
+# Plotting
+barplot(cbind(product1, product2, product3, product4, product5), beside=TRUE, col=rainbow(5), main="Product Sales Visualization")
