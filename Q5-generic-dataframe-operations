@@ -1,0 +1,16 @@
+data <- data.frame(
+  Subject = 1:6,
+  Class = c(1, 2, 1, 2, 1, 2),
+  Marks = c(56, 75, 48, 69, 84, 53)
+)
+
+# (i) Subset with Subject less than 4
+subset1 <- subset(data, Subject < 4)
+print(subset1)
+
+# (ii) Subset where Subject < 3 and Class equals 2
+subset2 <- data[1:5,]
+subset2 <- subset2[subset2$Class == 2,]
+print(subset2)
+# Visualization
+plot(subset1$Marks, type="b", main="Subset Visualization", col="blue")
