@@ -1,0 +1,10 @@
+data <- data.frame(CourseID=11:16, Class=c(1,2,1,2,1,2), Marks=c(56,75,48,69,84,53))
+
+# (i) Using [ ]
+subset1 <- data[data$CourseID < 13, ]
+
+# (ii) Using subset()
+subset2 <- subset(data, CourseID < 13 | Class == 2)
+
+print(subset1)
+print(subset2)
