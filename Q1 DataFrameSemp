@@ -1,0 +1,7 @@
+employee_data <- data.frame(
+  Name = c("Alice", "Bob", "Charlie", "David", "Eva"),
+  Age = c(28, 34, 25, 40, 30),
+  Department = c("HR", "Finance", "IT", "Marketing", "Sales"),
+  Salary = c(50000, 60000, 55000, 45000, 70000)
+)
+summary(employee_data)
