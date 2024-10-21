@@ -1,0 +1,3 @@
+# Loan data analysis
+loan_data <- data.frame(ApplicantID=1:5, LoanAmount=c(200000,150000,300000,250000,180000))
+plot(loan_data$LoanAmount, type="o", col="darkred", main="Loan Data Analysis")
