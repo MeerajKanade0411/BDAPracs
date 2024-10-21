@@ -1,0 +1,5 @@
+data(iris)
+
+# Summary and visualization
+summary(iris)
+plot(iris$Sepal.Length, iris$Sepal.Width, col=iris$Species, main="Iris Data Visualization")
