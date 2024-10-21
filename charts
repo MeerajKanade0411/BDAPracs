@@ -1,0 +1,22 @@
+data <- c(23, 45, 10, 34, 89, 20, 67, 99)
+
+# Scatterplot
+plot(data, main="Scatterplot", col="blue", pch=19)
+
+# Bubble Chart
+symbols(data, circles=data, inches=0.5, main="Bubble Chart", fg="blue")
+
+# Bar Chart
+barplot(data, main="Bar Chart", col="lightblue")
+
+# Dot Plot
+dotchart(data, main="Dot Plot", col="red")
+
+# Histogram
+hist(data, main="Histogram", col="green")
+
+# Box Plot
+boxplot(data, main="Box Plot", col="purple")
+
+# Pie Chart
+pie(data, main="Pie Chart", col=rainbow(length(data)))
