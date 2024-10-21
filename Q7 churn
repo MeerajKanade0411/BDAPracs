@@ -1,0 +1,5 @@
+library(ggplot2)
+
+# Example Churn data analysis
+churn_data <- data.frame(CustomerID=1:10, Churn=c(0,1,0,0,1,1,0,1,0,1))
+ggplot(churn_data, aes(x=CustomerID, y=Churn)) + geom_bar(stat="identity", fill="lightgreen") + ggtitle("Churn Data Analysis")
