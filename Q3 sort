@@ -1,0 +1,11 @@
+numbers <- c(23, 45, 10, 34, 89, 20, 67, 99)
+
+# Ascending order
+ascending_order <- sort(numbers)
+
+# Descending order
+descending_order <- sort(numbers, decreasing = TRUE)
+
+# Plotting
+plot(ascending_order, type="o", col="blue", main="Ascending Order")
+plot(descending_order, type="o", col="red", main="Descending Order")
