@@ -1,0 +1,20 @@
+library(digest)
+# Function to perform bit extraction
+rightmost_zero <- function(x) {
+  return(nchar(gsub(".*1", "", as.character(intToBits(x)))))
+}
+
+# FM algorithm implementation
+flajolet_martin <- function(data) {
+  max_zeroes <- 0
+  for (d in data) {
+    hash_val <- as.numeric(digest(d, algo = "md5", serialize = FALSE))
+    max_zeroes <- max(max_zeroes, rightmost_zero(hash_val))
+  }
+  return(2^max_zeroes)  # Estimate of distinct elements
+}
+
+# Example usage
+data_stream <- c("Alice", "Bob", "Alice", "Charlie", "Bob", "David")
+distinct_count_estimate <- flajolet_martin(data_stream)
+print(distinct_count_estimate)
